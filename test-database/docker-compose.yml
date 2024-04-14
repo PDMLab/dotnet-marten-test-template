@@ -2,7 +2,7 @@ version: "3"
 
 services:
   test-database-1:
-    image: library/postgres:14
+    image: library/postgres:16
     container_name: testdb-1
     environment:
       POSTGRES_USER: 'postgres'
