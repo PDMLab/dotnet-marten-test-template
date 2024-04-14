@@ -21,7 +21,7 @@ public class SomethingProjection : SingleStreamProjection<Something>
 }
 
 [TestFixture]
-public class When_snapshot_is_configured_inline
+public class When_projection_is_configured_inline
 {
   public class When_event_is_persisted
   {
@@ -49,7 +49,7 @@ public class When_snapshot_is_configured_inline
     }
 
     [Test]
-    public async Task should_write_snapshot_in_same_transaction()
+    public async Task should_write_projection_in_same_transaction()
     {
       await using var session = _store?.QuerySession();
       var something = await session?.LoadAsync<Something>(_streamId)!;
